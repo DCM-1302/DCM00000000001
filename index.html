@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Baby's second page</title>
+	</head>
+
+	<body>
+		<h1>1. Botones (alertas y confirmaciones)</h1>
+		<button>Useless</button>
+		<br><br>
+
+		<button onclick="action_1()" id="Bt1">Botón 1</button> <!--Alerta-->
+		<br>
+		<button onclick="action_2()" id="Bt2">Botón 2</button> <!--Confirmación-->
+		<br><br>
+		<button onclick="action_3()" id="Bt3">Botón 3</button>
+		<br><br><br>
+
+		<h2>2. Despliegue de datos</h2>
+		<p>Vamos a necesitar unos datos personales, gracias por su colaboración</p> <br>
+		Primer nombre: <input type="text" name="texto 1" id="Tx1">
+		Segundo nombre: <input type="text" name="texto 2" id="Tx2"> <br>
+
+		<p> Primer apellido: <input type="text" name="texto 3" id="Tx3"> </p> 
+		<p> Segundo apellido: <input type="text" name="texto 4" id="Tx4"> </p>
+
+		<button onclick="action_4()" id="Bt4">Concatenar</button> <br><br>
+		Nombre completo: &nbsp;<output id="Out1"></output>
+
+		<style type="text/css">
+			/*FABOULOUS*/
+			body{
+				background-image: url(wa.jpg);
+				background-repeat: initial;
+				color: rgba(255, 255, 255, 1);
+			}
+			h1{color: rgba(255, 31, 256, 1.0);}
+			h2{color: rgba(15, 0, 179, 1);}
+			#Out1{color: rgba(255, 235, 20, 1.0);}
+		</style>
+
+		<script type="text/javascript">
+			//Maté a Mufasa
+			function action_1() {
+				alert("FOR THOUSANDS OF YEARS I LAID DORMANT")
+			}
+
+			function action_2() {
+				confirm("WHO DARES DISTURB MY SLUMBER?")
+			}
+			function action_3() {
+				alert("...i need an adult");
+				confirm("I AM AN ADULT")
+			}
+			function action_4() {
+				var Name= document.getElementById("Tx1").value+" "+ 
+						  document.getElementById("Tx2").value+" "+ 
+						  document.getElementById("Tx3").value+" "+
+						  document.getElementById("Tx4").value
+				alert(Name)
+				document.getElementById("Out1").innerHTML=Name
+			}
+		</script>
+
+	</body>
+
+</html>
